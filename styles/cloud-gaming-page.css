@@ -1,0 +1,143 @@
+body{
+    font-style: normal;
+    font-family: 'Google Sans', serif;
+}
+#cl-section-1{
+    position: relative;
+    overflow: hidden;
+    height: 61vh;
+    top: -1.7vh;
+    }
+#cl-section-1-img-container{
+    height: 61vh;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to top,black,transparent);
+    bottom: 0;
+    transition: transform 0.7s ease-in-out;
+    z-index: 0;
+}
+#cl-section-1-img-container:hover{
+    transform: scale(107%);
+}
+.cl-image-1-layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(14,14,14,0.5);
+    z-index: 1;
+}
+.sec-1-img{
+    object-position: center;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: grayscale(96%);
+    position: absolute;
+}
+
+#cl-section-1 h2{
+    position: absolute;
+    bottom: 14vh;
+    left: 17vw;
+    font-weight: 600;
+    color: var(--text);
+    opacity: 80%;
+    font-size: 2.8rem;
+    font-family: trek-classic-credits,sans-serif;
+
+}
+#cl-section-1 h1{
+    -webkit-text-stroke: 1px var(--primary);
+    font-size: 7.5rem;
+    font-weight: 5;
+    color: transparent;
+    position: absolute;
+    left: 9.5vw;
+    bottom: 12vh;
+    font-family: fantasy, serif;
+}
+.cl-section-1-state{
+    bottom: 8vh;
+    left:9.5vw;
+    width: fit-content;
+    height: auto;
+    border: 1px solid var(--red-line);
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    padding: 2px 10px 2px 1px;
+    gap: 10px;
+    background-color: rgb(32 31 31 / 0.8);
+}
+.glow-box{
+    height: 7px;
+    width: 7px;
+    border-radius: 1px;
+    background-color: var(--primary);
+    margin: 10px;
+    box-shadow: 0 0 8px 2px var(--primary);
+    animation: blinkGlow 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes blinkGlow {
+    0% {
+        opacity: 0.4;
+        box-shadow: 0 0 4px 0 var(--primary);
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 12px 1px var(--primary);
+    }
+}
+
+#left-stat{
+    font-weight: 100;
+    font-size: 0.9rem;
+    margin-right: 5px;
+    border-right: 1px solid var(--red-line);
+}
+.latency {
+    color: var(--primary-600);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 6px;
+}
+
+.latency i {
+    color:var(--primary-600);
+    font-size: 14px;
+}
+
+
+/*======================================| Section 2 |============================================*/
+#cl-section-2{
+    width: 70vw;
+    height: fit-content;
+    position: relative;
+    left: 15vw;
+    background: #561010;
+
+}
+#carousel{
+    width: fit-content;
+    height: auto;
+    position: relative;
+}
+.carousel__list{
+    height:60vh ;
+    width: 70vw;
+    background: #2a2a2a;
+    margin-top: 10px;
+    position: relative;
+}
+#soon-games-row{
+    height: 20vh;
+    width: auto;
+    background: #5C5C5C;
+}

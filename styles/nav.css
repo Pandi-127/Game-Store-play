@@ -1,0 +1,41 @@
+
+/*========================================| NAVBAR |=====================================*/
+
+#nav-login-btn {
+    padding: 7px 18px;
+    text-transform: uppercase;
+    border: none;
+    background: var(--primary);
+    color: var(--background);
+    font-weight: bold;
+    font-family: "JetBrains Mono",monospace;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+#nav-login-btn:hover {
+    background: var(--primary-500);
+}
+#nav-title {
+
+    font-family: "JetBrains Mono", serif;
+    font-weight: bold;
+}
+#navbar {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 18px 32px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--background-100);
+    background: color-mix(var(--background) 50%, transparent);
+    backdrop-filter: blur(0.4rem);
+    z-index: 10;
+}
+#nav-items {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
