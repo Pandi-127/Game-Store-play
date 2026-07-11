@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Cloud-gaming</title>
       <link rel="stylesheet" href="../styles/nav.css">
+      <link rel="stylesheet" href="../styles/footer.css">
       <link rel="stylesheet" href="../styles/index.css">
       <link rel="stylesheet" href="../styles/cloud-gaming-page.css">
       <style >
@@ -31,25 +32,57 @@
       </section>
       <h1>NO</h1>
       <h2>DOWNLOADS<br>DELAYS</h2>
-      <div class="cl-section-1-state">
-            <div id="left-stat" style="display: flex; flex-direction: row;">
-                  <div class="glow-box"></div>
-                  <span style="margin: 3px 7px 0  0" >SERVERS: OPTIMAL </span>
-            </div>
-            <div class="latency">
-                  <i class="fa-solid fa-gauge-high"></i> LATENCY : 12MS
-            </div>
-      </div>
 </section>
 <section id="cl-section-2">
-      <h1>LIVE NOW</h1>
+      <h1 style="margin-left: 10px">LIVE NOW</h1>
+      <hr style="margin: 20px 0 10px 0;">
       <div id="carousel">
-            <div class="carousel__list"></div>
-            <div class="carousel__list"></div>
-            <div class="carousel__list"></div>
+
+            <div class="carousel-item active-1" ><h1>0</h1></div>
+            <div class="carousel-item active-2"><h1>1</h1></div>
+            <div class="carousel-item active-3"><h1>2</h1></div>
+
+           <button class=" btn arrow-btn-left" data-name="left">&larr;</button>
+           <button class=" btn arrow-btn-right" data-name="right">&rarr;</button>
       </div>
-      <div id="soon-games-row"></div>
+      <h1 style="margin-left: 10px"> DEPLOYING SOON </h1>
+      <hr  style="margin: 20px 0 10px 0;">
+      <div class="soon-grid">
+            <div class="grid-item">g-1</div>
+            <div class="grid-item">g-2</div>
+            <div class="grid-item">g-3</div>
+            <div class="grid-item">g-4</div>
+            <div class="grid-item">g-5</div>
+            <div class="grid-item">g-6</div>
+      </div>
 </section>
+
 <footer id="footer-2"></footer>
 </body>
+<script>
+const carouselCards = document.querySelectorAll(".carousel-item");
+const button = document.querySelectorAll(".btn");
+
+function changeCard(activeCard){
+    carouselCards.forEach((e,i)=>{
+        e.style.display = activeCard === i? "block":"none";
+    })
+}
+changeCard(0);
+let currentIndex = 0;
+button.forEach((e)=>{
+    e.addEventListener('click',()=>{
+        switch(e.dataset.name){
+            case "left":
+                changeCard((currentIndex = currentIndex - 1 + carouselCards.length ) % carouselCards.length);
+                break;
+            case "right":
+                changeCard((currentIndex = currentIndex + 1) % carouselCards.length);
+                break;
+        }
+    })
+})
+
+
+</script>
 </html>
