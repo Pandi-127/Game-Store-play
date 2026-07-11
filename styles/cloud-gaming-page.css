@@ -121,23 +121,70 @@ body{
     height: fit-content;
     position: relative;
     left: 15vw;
-    background: #561010;
+    background: var(--background);
+    margin-top: 40px;
 
 }
 #carousel{
     width: fit-content;
-    height: auto;
+    height: 60vh;
     position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2px 0 60px 0;
+
 }
-.carousel__list{
+.carousel-item{
     height:60vh ;
-    width: 70vw;
-    background: #2a2a2a;
-    margin-top: 10px;
-    position: relative;
+    width: 69.4vw;
+    margin: 10px;
+    color: darkgrey;
+    justify-items: center;
+    align-content: center;
+    background: grey;
+
 }
+
+.arrow-btn-left {
+    position: absolute;
+    bottom: 50%;
+    left: 4%;
+}
+
+.arrow-btn-right{
+    position: absolute;
+    bottom: 50%;
+    right: 4%;
+}
+
 #soon-games-row{
     height: 20vh;
     width: auto;
     background: #5C5C5C;
+}
+
+/*===================================| NOTE  |=======================*/
+
+#note{
+    background: color-mix(#5C5C5C 30%,transparent);
+    height: fit-content;
+    width: 100%;
+    padding: 1vh 1vh;
+    position: absolute;
+    bottom: 0;
+}
+
+/*===================================| Soon Grid  |=======================*/
+
+.soon-grid{
+    padding: 3vh 1vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 20px;
+}
+.grid-item{
+    height: 55vh;
+    background: black;
+    border: 1px grey solid ;
 }
